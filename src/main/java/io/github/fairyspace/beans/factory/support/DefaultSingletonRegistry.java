@@ -12,7 +12,8 @@ public class DefaultSingletonRegistry implements SingletonRegistry {
         return singletonObjects.get(name);
     }
 
-    protected void addSingleton(String name,Object singletonObject){
+    @Override
+    public void addSingleton(String name, Object singletonObject){
         singletonObjects.put(name, singletonObject);
     }
 }
